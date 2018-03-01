@@ -1,0 +1,28 @@
+// --------------------------------------------------------------------------------
+// MODULES - ACTIVITY
+// --------------------------------------------------------------------------------
+.m-activity 								{ @include cf(); margin-bottom:20px; padding:15px 0 12px 0; background:$color-white-normal; box-shadow: 0px 1px 4px 0px rgba(119, 119, 119, 0.3); @include border-top-radius(2); @include border-right-radius(2px); @include border-bottom-radius(2px); @include border-left-radius(2px); cursor:pointer;
+	> div 									{ @include box-sizing(border-box); }
+
+	.status 								{ @include span(0.1);
+		.circle 							{ @include circle(10px, $color-white-normal); margin:15px auto 0 auto; }
+	}
+	
+	.glyph 									{ @include span(0.125);
+		.icon 								{ margin-top:3px; color:$color-gray-light; font-size:2em; }
+	}
+	
+	.activity-info							{ @include span(0.575); 
+		.title 								{ @include text-truncate(); font-size:1.125em; font-weight:500; }
+		.details 							{ @include text-truncate(); color:$color-gray-normal; font-size:0.750em; }
+		.details span 						{ margin-right:10px; }
+		.details span:last-child 			{ margin-right:0; }
+	}
+	
+	.date 									{ @include span(0.2); padding:5px 10px 0 0; text-align:right; color:$color-gray-normal; font-size:0.750em; }
+}
+.m-activity:hover 							{
+	.status 								{ 
+		.circle 							{ @include circle(10px, $color-blue-light); }
+	}
+}

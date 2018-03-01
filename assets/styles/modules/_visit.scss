@@ -1,0 +1,66 @@
+// --------------------------------------------------------------------------------
+// MODULES - VISIT
+// --------------------------------------------------------------------------------
+.m-visit 									{ 
+
+	.form-header 							{ height:100px; padding:10px; overflow:hidden; position:absolute; top:0; right:0; left:0;
+		.wizard-title						{ @include cf(); text-align:right; color:$color-blue-normal;
+			.title	 						{ @include col(.6); text-align:left; font-size:1.125em; font-weight:400; 
+				> div 						{ @include text-truncate(); }
+			}
+			.date, .time 					{ @include col(.2); line-height:21px; font-size:0.875em; }
+		}
+
+		.wizard								{ margin-top:20px; position:relative;
+			.wizard-ctrl 					{ min-width:546px; height:52px; position:relative; }
+
+			.line 							{ height:2px; position:absolute; top:32px; right:0; bottom:0; left:0; background:$color-blue-normal; }
+			.triangle 						{ display:none; z-index:399; position:absolute; top:42px; @include triangle(10px, rgba(240,240,240,1), up); }
+			.clickToExpand 					{ display:none; position:absolute; top:0; left:0; font-size:0.875em; color:$color-blue-normal; }
+
+			ul 								{ @include cf(); position:absolute; top:0; right:0; bottom:0; left:0; z-index:99; } 
+			li 								{ width:68px; padding:0 5px; float:left; position:relative; text-align:center; 
+				.node-text					{ font-size:0.875em; color:$color-blue-normal; @include text-truncate(); }
+				.node 						{ width:18px; height:18px; margin:8px auto; z-index:999; /*@include circle(16px, $color-white-normal); border:1px solid $color-blue-normal;*/ cursor:pointer; }
+
+				.node-selected 				{ background:url("../images/node-selected.png") no-repeat !important; }
+				.node-finished 				{ background:url("../images/node-finished.png") no-repeat; }
+				.node-todo 					{ background:url("../images/node-todo.png") no-repeat; }
+				.node-incomplete			{ background:url("../images/node-incomplete.png") no-repeat; }
+				.node-warning 				{ background:url("../images/node-warning.png") no-repeat; }
+			}
+			li:first-child 					{ width:73px; padding:0 5px 0 0; text-align:left; 
+				.node 						{ margin:8px 0; }
+			}
+			li:last-child 					{ @include cf(); width:73px; padding:0 0 0 5px; float:right; text-align:right;
+				.node 					    { margin:8px 0 8px 0; float:right; }
+			}
+		}
+	}
+
+	.form 									{ padding:0 10px 20px 10px; position:absolute; top:110px; right:0; bottom:0; left:0; overflow-y:auto; overflow-x:hidden;
+		.form-title 						{ @include cf(); margin-bottom:10px; color:$color-blue-normal;
+			> div 							{ float:left; }
+			> div:first-child 				{ font-size:1.125em; font-weight:400; }
+			.info 							{ width:20px; height:20px; margin-left:10px; @include circle(20px, $color-blue-normal); cursor:pointer;
+				div 						{ margin:3px 0 0 8px; color:#fff; font-size:0.813em; font-weight:400; }
+			}
+		}
+		.form-ctrl 							{ min-width:524px; height:500px; margin-bottom:20px; padding:10px; background:$color-white-dark; border:1px solid $color-gray-extralight; 
+			> div 							{ color:$color-gray-light; font-size:1.25em; font-weight:500; }
+		}
+		.actions 							{ min-width:526px; @include cf();
+			.actions-secondary				{ @include col(.3); @include cf();
+				> div 						{ margin-right:10px; float:left; }
+			}
+			.actions-main					{ @include col(.7); @include cf(); 
+				> div, > ul					{ float:right; }
+			}
+			.practitioners					{ margin:10px 20px 0 0; 
+				li 							{ text-align:right; }
+				li.selected 				{ color:$color-blue-normal; }
+				.signed 					{ width:10px; height:10px; margin-right:5px; display:inline-block; @include circle(10px, $color-blue-normal); }
+			}			
+		}
+	}
+}

@@ -1,0 +1,10 @@
+// --------------------------------------------------------------------------------
+// MODULES - MAIN NAV
+// --------------------------------------------------------------------------------
+.m-mainnav									{ 
+	.action-icon 							{ margin-bottom:20px; color:$color-white-normal; font-size:1.750em; text-align:center; cursor:pointer; }
+	.action-icon:first-child 				{ margin-top:20px; }
+	.sep 									{ width:100%; height:1px; margin-bottom:20px; border-bottom:1px solid $color-blue-extradark; }
+	.person-icon							{ margin:0 auto 20px auto; @include glyph-circle(40px, 40px, 20px, $color-white-normal, 8px 0 0 0, $color-blue-light, 2em); cursor:pointer; }
+	.pointer 								{ position:absolute; top:442px; right:0px; @include triangle(5px, $color-white-normal, left); }
+}

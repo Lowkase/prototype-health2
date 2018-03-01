@@ -1,0 +1,23 @@
+// --------------------------------------------------------------------------------
+// HEADER 
+// --------------------------------------------------------------------------------
+header 										{ @include cf(); background:$color-blue-normal;
+	> div 									{ @include box-sizing(border-box); }
+
+	.logo									{ @include span(.20);  padding:0 0 0 20px;
+		img 								{ display:block; }
+	}
+
+	.facility, .practitioner, .security 	{  color:$color-white-normal; }
+
+	.facility								{ @include span(.40); padding:0 20px; line-height:63px; @include text-truncate(); text-align:right; }
+	.practitioner							{ @include span(.30); @include cf(); font-weight:100;
+		> div:first-child 					{ width:75%; float:right; @include text-truncate(); line-height:63px; }
+		> div:last-child 					{ width:15%; float:right; }
+		.person-icon						{ margin-top:11px; @include glyph-circle(40px, 40px, 20px, $color-white-normal, 8px 0 0 0, $color-blue-light, 2em); }
+	}
+	.security								{ @include span(.10); padding:0px 10px 0 0;
+		.icon 								{ margin-top:14px; font-size:2em; text-align:right; cursor:pointer; }
+		.selected							{ color:$color-red-normal; }
+	}
+}

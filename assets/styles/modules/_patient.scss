@@ -1,0 +1,27 @@
+// --------------------------------------------------------------------------------
+// MODULES - PATIENT
+// --------------------------------------------------------------------------------
+.m-patient 									{ 
+	.patient-info 							{ @include cf(); @include box-sizing(border-box); height:400px; padding:20px; overflow-y:auto; position:absolute; top:0; right:0; left:0; color:$color-gray-dark; border-bottom:2px solid $color-gray-extralight;
+		> div:first-child					{ @include col(.40); }
+		> div:last-child 					{ @include col(.60); }
+		.person-icon 						{ @include glyph-circle(60px, 60px, 40px, $color-white-normal, 10px 0 0 0, $color-gray-normal, 3.5em); }
+		.first-name 						{ margin-top:10px; font-size:1.125em; font-weight:500; }
+		.last-name 							{ font-size:1.125em; font-weight:500; }
+		.age-sex 							{ margin-top:10px; }
+		.dob 								{ margin-bottom:20px; }
+		.info-title 						{ margin:10px 0 5px 0; font-size:0.938em; font-weight:500; }
+		.info-list 							{ margin-bottom:20px; font-size:0.875em; }
+		.info-list:last-child 				{ margin-bottom:0; }
+		.expand-collapse 					{ position:absolute; top:10px; right:10px; @include triangle(6px, $color-gray-dark, left); cursor:pointer; }
+
+	}
+	.activity-toolbar 						{ @include box-sizing(border-box); padding:20px; position:absolute; top:400px; right:0; left:0;
+		.dropdown 							{ @include cf();
+			.value 							{ @include span(0.6); font-weight:500; }
+			.arrow 							{ @include span(0.1); @include triangle(6px, $color-gray-dark, down); margin-top:5px; cursor:pointer; }
+		}
+		.icon-search						{ position:absolute; top:21px; right:10px; font-weight:700; cursor:pointer; }
+	}
+	.activity-list							{ padding:0 20px; position:absolute; top:460px; right:0; bottom:0; left:0; overflow-y:auto; }
+}

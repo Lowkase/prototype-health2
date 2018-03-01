@@ -1,0 +1,41 @@
+// --------------------------------------------------------------------------------
+// MODULES 
+// --------------------------------------------------------------------------------
+
+.m-btn 										{ width:120px; min-width:120px; padding:20px 10px; text-align:center; font-size:0.875em;  cursor:pointer;
+	&.m-btn-gray							{ background:$color-gray-extralight; color:$color-gray-dark; font-weight:400; }
+	&.m-btn-blue 							{ background:$color-blue-normal; color:$color-white-normal; }
+}
+
+.m-node-menu 								{ width:200px; padding:20px 10px; position:absolute; top:109px; left:10px; right:auto; display:none; z-index:9999; background:rgba(240,240,240,1); box-shadow:0px 2px 4px 0px rgba(119, 119, 119, 0.5); @include border-top-radius(2px); @include border-right-radius(2px); @include border-bottom-radius(2px); @include border-left-radius(2px);
+	li 										{ @include cf();
+		div 								{ float:left; }
+		div:first-child 					{ width:32px; height:32px; font-size:2em; color:$color-blue-normal; }
+		div:last-child 						{ width:150px; line-height:32px; @include text-truncate(); font-size:0.875em; cursor:pointer; 
+			&:hover 						{ color:$color-blue-normal; }
+		}
+	}
+	li:last-child 							{ margin-bottom:0; }
+}
+.m-node-menu-horizontal 					{ width:auto; height:25px; padding:20px 10px 10px 10px; @include cf(); left:10px; right:10px; }
+
+.m-owl 										{ padding:0 20px; position:relative;
+	.owl-prev								{ position:absolute; top:1px; left:0; @include triangle(14px, $color-gray-dark, left);  cursor:pointer; }
+	.owl-next								{ position:absolute; top:1px; right:0; @include triangle(14px, $color-gray-dark, right); text-align:right; cursor:pointer; }
+	.owl-carousel							{ }
+	.owl-item 								{ 
+		> div 								{ @include cf(); 
+			> div 							{ float:left; }
+			> div:first-child 				{ width:20px; height:17px; font-size:1.25em; color:$color-blue-normal; border-left:1px solid $color-blue-normal; }
+			> div:last-child 				{ width:95px; @include text-truncate(); margin-right:5px; font-size:0.875em; cursor:pointer; 
+				&:hover 					{ color:$color-blue-normal; }
+			}
+		}
+	}
+	.owl-item:first-child 					{
+		> div 								{
+			> div:first-child 				{ border-left:0;
+			}
+		}
+	}
+}

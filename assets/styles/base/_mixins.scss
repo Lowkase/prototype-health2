@@ -1,0 +1,27 @@
+// --------------------------------------------------------------------------------
+// MIXINS
+// --------------------------------------------------------------------------------
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	box-shadow: $value;
+}
+
+@mixin glyph-circle($width, $height, $radius, $background-color, $icon-padding, $icon-color, $icon-size){
+	width:$width;
+	height:$height;
+	overflow:hidden;
+	background:$background-color;
+	@include border-top-radius($radius);
+	@include border-right-radius($radius);
+	@include border-bottom-radius($radius);
+	@include border-left-radius($radius);
+
+	> div { padding:$icon-padding; color:$icon-color; font-size:$icon-size; text-align:center; }
+}

@@ -1,0 +1,18 @@
+/* -------------------------------------------------------------------------------- */
+/* HTML KEYWORDS
+/* -------------------------------------------------------------------------------- */
+html                                        { -webkit-text-size-adjust:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
+    ::-moz-selection                        { background:#b3d4fc; text-shadow:none; } /* Hightligt */
+    ::selection                             { background:#b3d4fc; text-shadow:none; } /* Hightligt */
+    ::-webkit-scrollbar 					{ width:10px; height:10px; background:$color-white-dark; }
+    ::-webkit-scrollbar-thumb				{ background:$color-gray-light; }
+}
+
+body                                        { 	min-width:1024px; 
+												margin:0 auto; 
+												font-family:'Roboto', sans-serif; 
+												font-weight:300;
+												font-color:$color-gray-normal;
+}
+
+ul                                          { list-style-type:none; margin:0; padding:0; }

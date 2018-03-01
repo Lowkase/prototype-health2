@@ -1,0 +1,583 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title v-text="title">NetHealth - Prototype</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/styles/style.css">
+        <link rel="stylesheet" href="assets/styles/libs/owl/owl.carousel.css">
+        <link rel="stylesheet" href="assets/styles/libs/owl/owl.theme.css">
+    </head>
+    <body>
+
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                
+            </div>
+            <div class="facility">
+                Central Ambulatory Clinic
+            </div>
+            <div class="practitioner">
+                <div>
+                    Dr. T. Pynchon
+                </div>
+                <div>
+                    <div class="person-icon">
+                        <div class="icon icon-person"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="security">
+                <div class="icon icon-lock" id="switch-menu"></div>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <section>
+
+            <!-- MAIN NAV -->
+            <nav class="m-mainnav">
+                <div class="icon icon-thumbnails action-icon"></div>
+                <div class="icon icon-search action-icon"></div>
+                <div class="icon icon-calendar action-icon"></div>
+                <div class="icon icon-list action-icon"></div>
+                <div class="icon icon-mail action-icon"></div>
+                <div class="icon icon-chart action-icon"></div>
+                <div class="icon icon-clipboard action-icon"></div>
+                <div class="sep"></div>
+                <div class="person-icon">
+                    <div class="icon icon-person"></div>
+                </div>
+                <div class="person-icon">
+                    <div class="icon icon-person"></div>
+                </div>
+                <div class="pointer"></div>
+            </nav>
+
+            <!-- PATIENT -->
+            <aside>
+                <div class="m-patient">
+                    <div class="patient-info">
+                        <div>
+                            <div class="person-icon">
+                                <div class="icon icon-person"></div>
+                            </div>
+                            <div class="first-name">Philip</div>
+                            <div class="last-name">Calvin-Golding</div>
+                            <div class="age-sex">
+                                <span>42y</span> | <span>M</span>
+                            </div>
+                            <div class="dob">12/06/1971</div>
+                            <div class="info-title">Allergies</div>
+                            <ul class="info-list">
+                                <li>Penicillin</li>
+                                <li>Sesame Seeds</li>
+                            </ul>
+                            <div class="info-title">Alerts</div>
+                            <ul class="info-list">
+                                <li>Risk for falls</li>
+                                <li>Another Alert</li>
+                            </ul>                            
+                        </div>
+                        <div>
+                            <div class="info-title">Current Admission</div>
+                            <ul class="info-list">
+                                <li>Since 10/14/2013, Outpatient</li>
+                                <li>Diabetic Ulcer, left foot</li>
+                                <li>Diabetic Ulcer, left foot</li>
+                            </ul> 
+                            <div class="info-title">Diagnosis</div>
+                            <ul class="info-list">
+                                <li>Diabetic Ulcer</li>
+                                <li>Diabetes mellitus with ketoacidosis</li>
+                            </ul> 
+                            <div class="info-title">Providers</div>
+                            <ul class="info-list">
+                                <li>Richard Harris, MD (wound care)</li>
+                                <li>Michael Milwicz, MD (primary)</li>
+                                <li>2 more...</li>
+                            </ul> 
+                            <div class="info-title">Phone</div>
+                            <ul class="info-list">
+                                <li>222-333-4444</li>
+                                <li>333-444-5555</li>
+                            </ul> 
+                        </div>
+                        <div class="expand-collapse"></div>
+                    </div>
+                    <div class="activity-toolbar">
+                        <div class="dropdown">
+                            <div class="value">Show All Recent Activities</div>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="icon icon-search"></div>
+                    </div>               
+                    <div class="activity-list">
+                        <div class="m-activity">
+                            <div class="status">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="glyph">
+                                <div class="icon icon-chart"></div>
+                            </div>
+                            <div class="activity-info">
+                                <div class="title">Hemoglobin 1AC</div>
+                                <div class="details">
+                                    <span>6.4%</span>
+                                    <span>152mg/dl</span>
+                                    <span>8.1mmo/L</span>
+                                </div>
+                            </div>
+                            <div class="date">
+                                10/25/15
+                            </div>
+                        </div>
+
+                        <div class="m-activity">
+                            <div class="status">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="glyph">
+                                <div class="icon icon-chart"></div>
+                            </div>
+                            <div class="activity-info">
+                                <div class="title">Eye Exam</div>
+                                <div class="details">
+                                    <span>Dr. Sue Robins</span>
+                                    <span>Visit note snippet indicates that a new perscription is required</span>
+                                </div>
+                            </div>
+                            <div class="date">
+                                10/25/15
+                            </div>
+                        </div>
+
+                        <div class="m-activity">
+                            <div class="status">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="glyph">
+                                <div class="icon icon-chart"></div>
+                            </div>
+                            <div class="activity-info">
+                                <div class="title">Hemoglobin 1AC</div>
+                                <div class="details">
+                                    <span>6.4%</span>
+                                    <span>152mg/dl</span>
+                                    <span>8.1mmo/L</span>
+                                </div>
+                            </div>
+                            <div class="date">
+                                10/25/15
+                            </div>
+                        </div>
+
+                        <div class="m-activity">
+                            <div class="status">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="glyph">
+                                <div class="icon icon-chart"></div>
+                            </div>
+                            <div class="activity-info">
+                                <div class="title">Eye Exam</div>
+                                <div class="details">
+                                    <span>Dr. Sue Robins</span>
+                                    <span>Visit note snippet indicates that a new perscription is required</span>
+                                </div>
+                            </div>
+                            <div class="date">
+                                10/25/15
+                            </div>
+                        </div>
+                    </div>               
+                </div>
+            </aside>
+            <!-- PATIENT - END -->
+
+            <!-- FORMS -->
+            <article class="m-visit">
+
+                <!-- NODE MENU NEEDS TO HOVER OVER ALL ELEMENTS IN m-visit -->
+                <div class="m-node-menu" id="nodemenu-1">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Arrival Information</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Vital Signs</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Allery List</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Medications</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Review of Systems</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Medial History</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Surgical History</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Family History</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Social History</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Advanced Directives</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Wounds</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Arrival Information</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Vital Signs</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Allery List</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Medications</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Review of Systems</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Medial History</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Surgical History</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Family History</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Social History</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Advanced Directives</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Wounds</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-2">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Paint Assessment</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Fall Risk Assessment</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Nutrition Risk Assessment</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Neuropathy Assessment</div></div>
+                            <div><div></div><div class="menu-item">Lower Extremity Assessment</div></div>
+                            <div><div></div><div class="menu-item">Educational Needs Assessment/Barries</div></div>
+                            <div><div></div><div class="menu-item">Education Goals</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Paint Assessment</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Fall Risk Assessment</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Nutrition Risk Assessment</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Neuropathy Assessment</div></li>
+                        <li><div></div><div class="menu-item">Lower Extremity Assessment</div></li>
+                        <li><div></div><div class="menu-item">Educational Needs Assessment / Barries</div></li>
+                        <li><div></div><div class="menu-item">Education Goals</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-3">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Plan of Care</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Procedures</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Physician Orders</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Clinic Level of Care Assessment</div></div>
+                            <div><div></div><div class="menu-item">Super Bill</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>                    
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Plan of Care</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Procedures</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Physician Orders</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Clinic Level of Care Assessment</div></li>
+                        <li><div></div><div class="menu-item">Super Bill</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-4">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Treatment Notes</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Patient / Caregiver Education</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Discharge Instructions</div></div>
+                            <div><div class="icon"></div><div class="menu-item">Visit Discharge Instructions</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>                       
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Treatment Notes</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Patient / Caregiver Education</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Discharge Instructions</div></li>
+                        <li><div class="icon"></div><div class="menu-item">Visit Discharge Instructions</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-5">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Multi-Wound Chart</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Narrative Notes</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Patient Communication Log</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>                       
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Multi-Wound Chart</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Narrative Notes</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Patient Communication Log</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-6">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel oc6">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 1 Procedure 1</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 1 Procedure 2</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 1 Procedure 3</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 1 Procedure 4</div></div>
+                            <div><div></div><div class="menu-item">Extra Node 1 Procedure 5</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>                       
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 1 Procedure 1</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 1 Procedure 2</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 1 Procedure 3</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 1 Procedure 4</div></li>
+                        <li><div></div><div class="menu-item">Extra Node 1 Procedure 5</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-7">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 2 Procedure 1</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 2 Procedure 2</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 2 Procedure 3</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 2 Procedure 4</div></div>
+                            <div><div></div><div class="menu-item">Extra Node 2 Procedure 5</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>                       
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 2 Procedure 1</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 2 Procedure 2</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 2 Procedure 3</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 2 Procedure 4</div></li>
+                        <li><div></div><div class="menu-item">Extra Node 2 Procedure 5</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-8">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 3 Procedure 1</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 3 Procedure 2</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 3 Procedure 3</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 3 Procedure 4</div></div>
+                            <div><div></div><div class="menu-item">Extra Node 3 Procedure 5</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>                       
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 3 Procedure 1</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 3 Procedure 2</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 3 Procedure 3</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 3 Procedure 4</div></li>
+                        <li><div></div><div class="menu-item">Extra Node 3 Procedure 5</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-9">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 4 Procedure 1</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 4 Procedure 2</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 4 Procedure 3</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Extra Node 4 Procedure 4</div></div>
+                            <div><div></div><div class="menu-item">Extra Node 4 Procedure 5</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>                       
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 4 Procedure 1</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 4 Procedure 2</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 4 Procedure 3</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Extra Node 4 Procedure 4</div></li>
+                        <li><div></div><div class="menu-item">Extra Node 4 Procedure 5</div></li>
+                    </ul>
+                </div>
+                <div class="m-node-menu" id="nodemenu-10">
+                    <div class="m-owl">
+                        <div class="owl-prev"></div>
+                        <div class="owl-carousel">
+                            <div><div class="icon icon-check"></div><div class="menu-item">Sign 1</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Sign 2</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Sign 3</div></div>
+                            <div><div class="icon icon-check"></div><div class="menu-item">Sign4</div></div>
+                            <div><div></div><div class="menu-item">Sign 5</div></div>
+                        </div>
+                        <div class="owl-next"></div>
+                    </div>                       
+                    <ul>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Sign 1</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Sign 2</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Sign 3</div></li>
+                        <li><div class="icon icon-check"></div><div class="menu-item">Sign 4</div></li>
+                        <li><div></div><div class="menu-item">Sign 5</div></li>
+                    </ul>
+                </div>
+
+
+                <div class="form-header">
+                    <div class="wizard-title">
+                        <div class="title">
+                            <div>Initial Visit</div>
+                        </div>
+                        <div class="date">08/04/2015</div>
+                        <div class="time">11:30am</div>
+                    </div>
+                    <div class="wizard">
+                        <div class="wizard-ctrl">
+                            <div class="line"></div>
+                            <div class="triangle"></div>
+                            <div class="clickToExpand">Click...</div>
+                            <ul>
+                                <li>
+                                    <div class="node-text">Initial Assessment</div>
+                                    <div class="node node-finished node-selected" id="node-1"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Risk Assessment & Education</div>
+                                    <div class="node node-warning" id="node-2"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Nurse & Physician</div>
+                                    <div class="node node-finished" id="node-3"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Discharge</div>
+                                    <div class="node node-finished" id="node-4"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Misc</div>
+                                    <div class="node node-incomplete" id="node-5"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Extra Node</div>
+                                    <div class="node node-incomplete" id="node-6"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Extra Node</div>
+                                    <div class="node node-incomplete" id="node-7"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Extra Node</div>
+                                   <div class="node node-todo" id="node-8"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Extra Node</div>
+                                    <div class="node node-todo" id="node-9"></div>
+                                </li>
+                                <li>
+                                    <div class="node-text">Sign</div>
+                                    <div class="node node-todo" id="node-10"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form">
+                    <div class="form-title">
+                        <div class="form-title-value">Arrival Information</div>
+                        <div class="info"><div>i</div></div>                        
+                    </div>
+
+                    <div class="form-ctrl">
+                        <div><span class="form-ctrl-value">Arrival Information</span><span> Form</span></div>
+                    </div>
+                    <div class="actions">
+                        <div class="actions-secondary">
+                            <div class="m-btn m-btn-gray">DISCARD</div>
+                        </div>
+                        <div class="actions-main">
+                            <div class="m-btn m-btn-blue">SAVE</div>
+                            <ul class="practitioners">
+                                <li class="selected"><span class="signed"></span><span>Tom Pynchon, MD</span></li>
+                                <li>Betty Walsh, RN</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- FORMS - END -->
+
+        </section>
+        <!-- CONTENT - END -->
+
+
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="assets/scripts/smartresize.js"></script>
+        <script src="assets/scripts/wizard.js"></script>
+        <script src="assets/scripts/menu.js"></script>
+        <script src="assets/styles/libs/owl/owl.carousel.min.js"></script>
+
+        <script>
+            $( document ).ready(function() {
+
+                // INIT
+                var owl = $(".owl-carousel");
+                owl.owlCarousel({ pagination:false, rewindNav:false });
+
+                init();
+
+                // RESIZE: window
+                $.event.special.debouncedresize.threshold = 0;
+                $(window).on("debouncedresize", function( event ) {
+                    menuReset();
+                    chunk("resize");
+                });
+
+                // CLICK:: #switch-menu
+                $(document).on('click', "#switch-menu", function( e ) {
+                    $(".m-node-menu").toggleClass("m-node-menu-horizontal");
+                    $("#switch-menu").toggleClass("selected");
+                    if ( isMenuHorizonal() ) {
+                        menu( $("#node-1") ); 
+                        $("#node-1").find("ul").hide();
+                        $("#node-1").find(".m-owl").show();
+                    }
+                });
+
+                // CLICK:: .owl-next, .owl-prev
+                $(document).on('click', '.owl-next', function( e ) {
+                    e.stopPropagation();
+                    $(this).prev().trigger('owl.next');
+                });
+                $(document).on('click', '.owl-prev', function( e ) {
+                    e.stopPropagation();
+                    $(this).next().trigger('owl.prev');
+                });
+
+                // CLICK:: #node-n
+                $(document).on('click', 'div[id^="node-"]', function( e ) {
+                    e.stopPropagation();
+
+                    menuReset();
+
+                    // Check if we are packed
+                    if( isNodePacked( $(this) ) === true ){
+                        chunk("expand");
+                    } else {
+                        menu( $(this) );    
+                    }             
+                });
+
+                // CLICK:: .menu-item
+                $(document).on('click', '.menu-item', function( e ) {
+                    if ( ! isMenuHorizonal() ) {
+                        menuReset();
+                    }
+                    $(".form-ctrl-value").html( $(this).html() );
+                    $(".form-title .form-title-value").html( $(this).html() );
+                });
+
+                // CLICK:: Hide the menu dialog when clicking anywhere else on the viewport
+                $(document).on('click', 'body', function( e ) {
+                    menuReset();          
+                });
+
+            });
+        </script>
+
+    </body>
+</html>

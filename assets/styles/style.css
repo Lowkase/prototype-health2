@@ -1,0 +1,1503 @@
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
+@font-face {
+  font-family: "nethealth";
+  src: url("../fonts/netHealth/nethealth.eot");
+  src: url("../fonts/netHealth/nethealth.eot?#iefix") format("embedded-opentype"), url("../fonts/netHealth/nethealth.woff") format("woff"), url("../fonts/netHealth/nethealth.ttf") format("truetype"), url("../fonts/netHealth/nethealth.svg#nethealth") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 14, base/_fonts.scss */
+[data-icon]:before {
+  font-family: "nethealth" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 27, base/_fonts.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "nethealth" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 40, base/_fonts.scss */
+.icon-person:before {
+  content: "a";
+}
+
+/* line 43, base/_fonts.scss */
+.icon-lock:before {
+  content: "b";
+}
+
+/* line 46, base/_fonts.scss */
+.icon-thumbnails:before {
+  content: "c";
+}
+
+/* line 49, base/_fonts.scss */
+.icon-search:before {
+  content: "d";
+}
+
+/* line 52, base/_fonts.scss */
+.icon-mail:before {
+  content: "f";
+}
+
+/* line 55, base/_fonts.scss */
+.icon-list:before {
+  content: "e";
+}
+
+/* line 58, base/_fonts.scss */
+.icon-calendar:before {
+  content: "g";
+}
+
+/* line 61, base/_fonts.scss */
+.icon-chart:before {
+  content: "h";
+}
+
+/* line 64, base/_fonts.scss */
+.icon-clipboard:before {
+  content: "i";
+}
+
+/* line 67, base/_fonts.scss */
+.icon-gear:before {
+  content: "j";
+}
+
+/* line 70, base/_fonts.scss */
+.icon-check:before {
+  content: "l";
+}
+
+/* -------------------------------------------------------------------------------- */
+/* HTML KEYWORDS
+/* -------------------------------------------------------------------------------- */
+/* line 4, base/_elements.scss */
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  /* Hightligt */
+  /* Hightligt */
+}
+/* line 5, base/_elements.scss */
+html ::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/* line 6, base/_elements.scss */
+html ::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/* line 7, base/_elements.scss */
+html ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: #f2f2f2;
+}
+/* line 8, base/_elements.scss */
+html ::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+}
+
+/* line 11, base/_elements.scss */
+body {
+  min-width: 1024px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-color: #7a7a7a;
+}
+
+/* line 18, base/_elements.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, base/_modules.scss */
+.m-btn {
+  width: 120px;
+  min-width: 120px;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.875em;
+  cursor: pointer;
+}
+/* line 6, base/_modules.scss */
+.m-btn.m-btn-gray {
+  background: #e6e6e6;
+  color: #3b3b3b;
+  font-weight: 400;
+}
+/* line 7, base/_modules.scss */
+.m-btn.m-btn-blue {
+  background: #3399ce;
+  color: #fff;
+}
+
+/* line 10, base/_modules.scss */
+.m-node-menu {
+  width: 200px;
+  padding: 20px 10px;
+  position: absolute;
+  top: 109px;
+  left: 10px;
+  right: auto;
+  display: none;
+  z-index: 9999;
+  background: #f0f0f0;
+  box-shadow: 0px 2px 4px 0px rgba(119, 119, 119, 0.5);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+/* line 11, base/_modules.scss */
+.m-node-menu li {
+  *zoom: 1;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-node-menu li:before, .m-node-menu li:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-node-menu li:after {
+  clear: both;
+}
+/* line 12, base/_modules.scss */
+.m-node-menu li div {
+  float: left;
+}
+/* line 13, base/_modules.scss */
+.m-node-menu li div:first-child {
+  width: 32px;
+  height: 32px;
+  font-size: 2em;
+  color: #3399ce;
+}
+/* line 14, base/_modules.scss */
+.m-node-menu li div:last-child {
+  width: 150px;
+  line-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875em;
+  cursor: pointer;
+}
+/* line 15, base/_modules.scss */
+.m-node-menu li div:last-child:hover {
+  color: #3399ce;
+}
+/* line 18, base/_modules.scss */
+.m-node-menu li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 20, base/_modules.scss */
+.m-node-menu-horizontal {
+  width: auto;
+  height: 25px;
+  padding: 20px 10px 10px 10px;
+  *zoom: 1;
+  left: 10px;
+  right: 10px;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-node-menu-horizontal:before, .m-node-menu-horizontal:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-node-menu-horizontal:after {
+  clear: both;
+}
+
+/* line 22, base/_modules.scss */
+.m-owl {
+  padding: 0 20px;
+  position: relative;
+}
+/* line 23, base/_modules.scss */
+.m-owl .owl-prev {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid #3b3b3b;
+  cursor: pointer;
+}
+/* line 24, base/_modules.scss */
+.m-owl .owl-next {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #3b3b3b;
+  text-align: right;
+  cursor: pointer;
+}
+/* line 27, base/_modules.scss */
+.m-owl .owl-item > div {
+  *zoom: 1;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-owl .owl-item > div:before, .m-owl .owl-item > div:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-owl .owl-item > div:after {
+  clear: both;
+}
+/* line 28, base/_modules.scss */
+.m-owl .owl-item > div > div {
+  float: left;
+}
+/* line 29, base/_modules.scss */
+.m-owl .owl-item > div > div:first-child {
+  width: 20px;
+  height: 17px;
+  font-size: 1.25em;
+  color: #3399ce;
+  border-left: 1px solid #3399ce;
+}
+/* line 30, base/_modules.scss */
+.m-owl .owl-item > div > div:last-child {
+  width: 95px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 5px;
+  font-size: 0.875em;
+  cursor: pointer;
+}
+/* line 31, base/_modules.scss */
+.m-owl .owl-item > div > div:last-child:hover {
+  color: #3399ce;
+}
+/* line 37, base/_modules.scss */
+.m-owl .owl-item:first-child > div > div:first-child {
+  border-left: 0;
+}
+
+/* line 4, base/_layout.scss */
+nav, aside, article {
+  top: 63px;
+}
+
+/* line 6, base/_layout.scss */
+nav {
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #0b3246;
+}
+
+/* line 7, base/_layout.scss */
+aside {
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  background: #e6e6e6;
+}
+
+/* line 8, base/_layout.scss */
+article {
+  min-width: 526px;
+  position: absolute;
+  bottom: 0;
+  left: 460px;
+  right: 0;
+  background: #fff;
+}
+
+/* line 5, modules/_mainNav.scss */
+.m-mainnav .action-icon {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.750em;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 6, modules/_mainNav.scss */
+.m-mainnav .action-icon:first-child {
+  margin-top: 20px;
+}
+/* line 7, modules/_mainNav.scss */
+.m-mainnav .sep {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #061b33;
+}
+/* line 8, modules/_mainNav.scss */
+.m-mainnav .person-icon {
+  margin: 0 auto 20px auto;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+}
+/* line 26, base/_mixins.scss */
+.m-mainnav .person-icon > div {
+  padding: 8px 0 0 0;
+  color: #47c7ff;
+  font-size: 2em;
+  text-align: center;
+}
+/* line 9, modules/_mainNav.scss */
+.m-mainnav .pointer {
+  position: absolute;
+  top: 442px;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 8.66px solid #fff;
+  border-bottom: 5px solid transparent;
+}
+
+/* line 5, modules/_patient.scss */
+.m-patient .patient-info {
+  *zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 400px;
+  padding: 20px;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #3b3b3b;
+  border-bottom: 2px solid #e6e6e6;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-patient .patient-info:before, .m-patient .patient-info:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-patient .patient-info:after {
+  clear: both;
+}
+/* line 6, modules/_patient.scss */
+.m-patient .patient-info > div:first-child {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 38.2%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-patient .patient-info > div:first-child:before, .m-patient .patient-info > div:first-child:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-patient .patient-info > div:first-child:after {
+  clear: both;
+}
+/* line 58, libs/jeet/_grid.scss */
+.m-patient .patient-info > div:first-child:last-child {
+  margin-right: 0%;
+}
+/* line 7, modules/_patient.scss */
+.m-patient .patient-info > div:last-child {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 58.8%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-patient .patient-info > div:last-child:before, .m-patient .patient-info > div:last-child:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-patient .patient-info > div:last-child:after {
+  clear: both;
+}
+/* line 58, libs/jeet/_grid.scss */
+.m-patient .patient-info > div:last-child:last-child {
+  margin-right: 0%;
+}
+/* line 8, modules/_patient.scss */
+.m-patient .patient-info .person-icon {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  background: #fff;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+/* line 26, base/_mixins.scss */
+.m-patient .patient-info .person-icon > div {
+  padding: 10px 0 0 0;
+  color: #7a7a7a;
+  font-size: 3.5em;
+  text-align: center;
+}
+/* line 9, modules/_patient.scss */
+.m-patient .patient-info .first-name {
+  margin-top: 10px;
+  font-size: 1.125em;
+  font-weight: 500;
+}
+/* line 10, modules/_patient.scss */
+.m-patient .patient-info .last-name {
+  font-size: 1.125em;
+  font-weight: 500;
+}
+/* line 11, modules/_patient.scss */
+.m-patient .patient-info .age-sex {
+  margin-top: 10px;
+}
+/* line 12, modules/_patient.scss */
+.m-patient .patient-info .dob {
+  margin-bottom: 20px;
+}
+/* line 13, modules/_patient.scss */
+.m-patient .patient-info .info-title {
+  margin: 10px 0 5px 0;
+  font-size: 0.938em;
+  font-weight: 500;
+}
+/* line 14, modules/_patient.scss */
+.m-patient .patient-info .info-list {
+  margin-bottom: 20px;
+  font-size: 0.875em;
+}
+/* line 15, modules/_patient.scss */
+.m-patient .patient-info .info-list:last-child {
+  margin-bottom: 0;
+}
+/* line 16, modules/_patient.scss */
+.m-patient .patient-info .expand-collapse {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 10.392px solid #3b3b3b;
+  border-bottom: 6px solid transparent;
+  cursor: pointer;
+}
+/* line 19, modules/_patient.scss */
+.m-patient .activity-toolbar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  position: absolute;
+  top: 400px;
+  right: 0;
+  left: 0;
+}
+/* line 20, modules/_patient.scss */
+.m-patient .activity-toolbar .dropdown {
+  *zoom: 1;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-patient .activity-toolbar .dropdown:before, .m-patient .activity-toolbar .dropdown:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-patient .activity-toolbar .dropdown:after {
+  clear: both;
+}
+/* line 21, modules/_patient.scss */
+.m-patient .activity-toolbar .dropdown .value {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 60%;
+  margin-left: 0%;
+  margin-right: 0%;
+  font-weight: 500;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-patient .activity-toolbar .dropdown .value:before, .m-patient .activity-toolbar .dropdown .value:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-patient .activity-toolbar .dropdown .value:after {
+  clear: both;
+}
+/* line 22, modules/_patient.scss */
+.m-patient .activity-toolbar .dropdown .arrow {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 10%;
+  margin-left: 0%;
+  margin-right: 0%;
+  width: 0;
+  height: 0;
+  border-top: 10.392px solid #3b3b3b;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  margin-top: 5px;
+  cursor: pointer;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-patient .activity-toolbar .dropdown .arrow:before, .m-patient .activity-toolbar .dropdown .arrow:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-patient .activity-toolbar .dropdown .arrow:after {
+  clear: both;
+}
+/* line 24, modules/_patient.scss */
+.m-patient .activity-toolbar .icon-search {
+  position: absolute;
+  top: 21px;
+  right: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* line 26, modules/_patient.scss */
+.m-patient .activity-list {
+  padding: 0 20px;
+  position: absolute;
+  top: 460px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* line 4, modules/_activity.scss */
+.m-activity {
+  *zoom: 1;
+  margin-bottom: 20px;
+  padding: 15px 0 12px 0;
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(119, 119, 119, 0.3);
+  border-top-left-radius: 2;
+  border-top-right-radius: 2;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  cursor: pointer;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-activity:before, .m-activity:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-activity:after {
+  clear: both;
+}
+/* line 5, modules/_activity.scss */
+.m-activity > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 7, modules/_activity.scss */
+.m-activity .status {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 10%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-activity .status:before, .m-activity .status:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-activity .status:after {
+  clear: both;
+}
+/* line 8, modules/_activity.scss */
+.m-activity .status .circle {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 15px auto 0 auto;
+}
+/* line 11, modules/_activity.scss */
+.m-activity .glyph {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 12.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-activity .glyph:before, .m-activity .glyph:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-activity .glyph:after {
+  clear: both;
+}
+/* line 12, modules/_activity.scss */
+.m-activity .glyph .icon {
+  margin-top: 3px;
+  color: #c7c7c7;
+  font-size: 2em;
+}
+/* line 15, modules/_activity.scss */
+.m-activity .activity-info {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 57.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-activity .activity-info:before, .m-activity .activity-info:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-activity .activity-info:after {
+  clear: both;
+}
+/* line 16, modules/_activity.scss */
+.m-activity .activity-info .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.125em;
+  font-weight: 500;
+}
+/* line 17, modules/_activity.scss */
+.m-activity .activity-info .details {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #7a7a7a;
+  font-size: 0.750em;
+}
+/* line 18, modules/_activity.scss */
+.m-activity .activity-info .details span {
+  margin-right: 10px;
+}
+/* line 19, modules/_activity.scss */
+.m-activity .activity-info .details span:last-child {
+  margin-right: 0;
+}
+/* line 22, modules/_activity.scss */
+.m-activity .date {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding: 5px 10px 0 0;
+  text-align: right;
+  color: #7a7a7a;
+  font-size: 0.750em;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-activity .date:before, .m-activity .date:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-activity .date:after {
+  clear: both;
+}
+
+/* line 26, modules/_activity.scss */
+.m-activity:hover .status .circle {
+  width: 10px;
+  height: 10px;
+  background: #47c7ff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 6, modules/_visit.scss */
+.m-visit .form-header {
+  height: 100px;
+  padding: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+/* line 7, modules/_visit.scss */
+.m-visit .form-header .wizard-title {
+  *zoom: 1;
+  text-align: right;
+  color: #3399ce;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard-title:before, .m-visit .form-header .wizard-title:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard-title:after {
+  clear: both;
+}
+/* line 8, modules/_visit.scss */
+.m-visit .form-header .wizard-title .title {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 58.8%;
+  margin-left: 0%;
+  margin-right: 3%;
+  text-align: left;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard-title .title:before, .m-visit .form-header .wizard-title .title:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard-title .title:after {
+  clear: both;
+}
+/* line 58, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard-title .title:last-child {
+  margin-right: 0%;
+}
+/* line 9, modules/_visit.scss */
+.m-visit .form-header .wizard-title .title > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 11, modules/_visit.scss */
+.m-visit .form-header .wizard-title .date, .m-visit .form-header .wizard-title .time {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 17.6%;
+  margin-left: 0%;
+  margin-right: 3%;
+  line-height: 21px;
+  font-size: 0.875em;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard-title .date:before, .m-visit .form-header .wizard-title .date:after, .m-visit .form-header .wizard-title .time:before, .m-visit .form-header .wizard-title .time:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard-title .date:after, .m-visit .form-header .wizard-title .time:after {
+  clear: both;
+}
+/* line 58, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard-title .date:last-child, .m-visit .form-header .wizard-title .time:last-child {
+  margin-right: 0%;
+}
+/* line 14, modules/_visit.scss */
+.m-visit .form-header .wizard {
+  margin-top: 20px;
+  position: relative;
+}
+/* line 15, modules/_visit.scss */
+.m-visit .form-header .wizard .wizard-ctrl {
+  min-width: 546px;
+  height: 52px;
+  position: relative;
+}
+/* line 17, modules/_visit.scss */
+.m-visit .form-header .wizard .line {
+  height: 2px;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #3399ce;
+}
+/* line 18, modules/_visit.scss */
+.m-visit .form-header .wizard .triangle {
+  display: none;
+  z-index: 399;
+  position: absolute;
+  top: 42px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 17.32px solid #f0f0f0;
+  border-left: 10px solid transparent;
+}
+/* line 19, modules/_visit.scss */
+.m-visit .form-header .wizard .clickToExpand {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.875em;
+  color: #3399ce;
+}
+/* line 21, modules/_visit.scss */
+.m-visit .form-header .wizard ul {
+  *zoom: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard ul:before, .m-visit .form-header .wizard ul:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard ul:after {
+  clear: both;
+}
+/* line 22, modules/_visit.scss */
+.m-visit .form-header .wizard li {
+  width: 68px;
+  padding: 0 5px;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+/* line 23, modules/_visit.scss */
+.m-visit .form-header .wizard li .node-text {
+  font-size: 0.875em;
+  color: #3399ce;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 24, modules/_visit.scss */
+.m-visit .form-header .wizard li .node {
+  width: 18px;
+  height: 18px;
+  margin: 8px auto;
+  z-index: 999;
+  /*@include circle(16px, $color-white-normal); border:1px solid $color-blue-normal;*/
+  cursor: pointer;
+}
+/* line 26, modules/_visit.scss */
+.m-visit .form-header .wizard li .node-selected {
+  background: url("../images/node-selected.png") no-repeat !important;
+}
+/* line 27, modules/_visit.scss */
+.m-visit .form-header .wizard li .node-finished {
+  background: url("../images/node-finished.png") no-repeat;
+}
+/* line 28, modules/_visit.scss */
+.m-visit .form-header .wizard li .node-todo {
+  background: url("../images/node-todo.png") no-repeat;
+}
+/* line 29, modules/_visit.scss */
+.m-visit .form-header .wizard li .node-incomplete {
+  background: url("../images/node-incomplete.png") no-repeat;
+}
+/* line 30, modules/_visit.scss */
+.m-visit .form-header .wizard li .node-warning {
+  background: url("../images/node-warning.png") no-repeat;
+}
+/* line 32, modules/_visit.scss */
+.m-visit .form-header .wizard li:first-child {
+  width: 73px;
+  padding: 0 5px 0 0;
+  text-align: left;
+}
+/* line 33, modules/_visit.scss */
+.m-visit .form-header .wizard li:first-child .node {
+  margin: 8px 0;
+}
+/* line 35, modules/_visit.scss */
+.m-visit .form-header .wizard li:last-child {
+  *zoom: 1;
+  width: 73px;
+  padding: 0 0 0 5px;
+  float: right;
+  text-align: right;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard li:last-child:before, .m-visit .form-header .wizard li:last-child:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form-header .wizard li:last-child:after {
+  clear: both;
+}
+/* line 36, modules/_visit.scss */
+.m-visit .form-header .wizard li:last-child .node {
+  margin: 8px 0 8px 0;
+  float: right;
+}
+/* line 41, modules/_visit.scss */
+.m-visit .form {
+  padding: 0 10px 20px 10px;
+  position: absolute;
+  top: 110px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* line 42, modules/_visit.scss */
+.m-visit .form .form-title {
+  *zoom: 1;
+  margin-bottom: 10px;
+  color: #3399ce;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form .form-title:before, .m-visit .form .form-title:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form .form-title:after {
+  clear: both;
+}
+/* line 43, modules/_visit.scss */
+.m-visit .form .form-title > div {
+  float: left;
+}
+/* line 44, modules/_visit.scss */
+.m-visit .form .form-title > div:first-child {
+  font-size: 1.125em;
+  font-weight: 400;
+}
+/* line 45, modules/_visit.scss */
+.m-visit .form .form-title .info {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  background: #3399ce;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* line 46, modules/_visit.scss */
+.m-visit .form .form-title .info div {
+  margin: 3px 0 0 8px;
+  color: #fff;
+  font-size: 0.813em;
+  font-weight: 400;
+}
+/* line 49, modules/_visit.scss */
+.m-visit .form .form-ctrl {
+  min-width: 524px;
+  height: 500px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f2f2f2;
+  border: 1px solid #e6e6e6;
+}
+/* line 50, modules/_visit.scss */
+.m-visit .form .form-ctrl > div {
+  color: #c7c7c7;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+/* line 52, modules/_visit.scss */
+.m-visit .form .actions {
+  min-width: 526px;
+  *zoom: 1;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form .actions:before, .m-visit .form .actions:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form .actions:after {
+  clear: both;
+}
+/* line 53, modules/_visit.scss */
+.m-visit .form .actions .actions-secondary {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 27.9%;
+  margin-left: 0%;
+  margin-right: 3%;
+  *zoom: 1;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-secondary:before, .m-visit .form .actions .actions-secondary:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-secondary:after {
+  clear: both;
+}
+/* line 58, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-secondary:last-child {
+  margin-right: 0%;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-secondary:before, .m-visit .form .actions .actions-secondary:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-secondary:after {
+  clear: both;
+}
+/* line 54, modules/_visit.scss */
+.m-visit .form .actions .actions-secondary > div {
+  margin-right: 10px;
+  float: left;
+}
+/* line 56, modules/_visit.scss */
+.m-visit .form .actions .actions-main {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 69.1%;
+  margin-left: 0%;
+  margin-right: 3%;
+  *zoom: 1;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-main:before, .m-visit .form .actions .actions-main:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-main:after {
+  clear: both;
+}
+/* line 58, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-main:last-child {
+  margin-right: 0%;
+}
+/* line 344, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-main:before, .m-visit .form .actions .actions-main:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+.m-visit .form .actions .actions-main:after {
+  clear: both;
+}
+/* line 57, modules/_visit.scss */
+.m-visit .form .actions .actions-main > div, .m-visit .form .actions .actions-main > ul {
+  float: right;
+}
+/* line 59, modules/_visit.scss */
+.m-visit .form .actions .practitioners {
+  margin: 10px 20px 0 0;
+}
+/* line 60, modules/_visit.scss */
+.m-visit .form .actions .practitioners li {
+  text-align: right;
+}
+/* line 61, modules/_visit.scss */
+.m-visit .form .actions .practitioners li.selected {
+  color: #3399ce;
+}
+/* line 62, modules/_visit.scss */
+.m-visit .form .actions .practitioners .signed {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #3399ce;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 4, views/layout/_header.scss */
+header {
+  *zoom: 1;
+  background: #3399ce;
+}
+/* line 344, libs/jeet/_grid.scss */
+header:before, header:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+header:after {
+  clear: both;
+}
+/* line 5, views/layout/_header.scss */
+header > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 7, views/layout/_header.scss */
+header .logo {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding: 0 0 0 20px;
+}
+/* line 344, libs/jeet/_grid.scss */
+header .logo:before, header .logo:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+header .logo:after {
+  clear: both;
+}
+/* line 8, views/layout/_header.scss */
+header .logo img {
+  display: block;
+}
+/* line 11, views/layout/_header.scss */
+header .facility, header .practitioner, header .security {
+  color: #fff;
+}
+/* line 13, views/layout/_header.scss */
+header .facility {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 40%;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding: 0 20px;
+  line-height: 63px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+/* line 344, libs/jeet/_grid.scss */
+header .facility:before, header .facility:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+header .facility:after {
+  clear: both;
+}
+/* line 14, views/layout/_header.scss */
+header .practitioner {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 30%;
+  margin-left: 0%;
+  margin-right: 0%;
+  *zoom: 1;
+  font-weight: 100;
+}
+/* line 344, libs/jeet/_grid.scss */
+header .practitioner:before, header .practitioner:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+header .practitioner:after {
+  clear: both;
+}
+/* line 344, libs/jeet/_grid.scss */
+header .practitioner:before, header .practitioner:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+header .practitioner:after {
+  clear: both;
+}
+/* line 15, views/layout/_header.scss */
+header .practitioner > div:first-child {
+  width: 75%;
+  float: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 63px;
+}
+/* line 16, views/layout/_header.scss */
+header .practitioner > div:last-child {
+  width: 15%;
+  float: right;
+}
+/* line 17, views/layout/_header.scss */
+header .practitioner .person-icon {
+  margin-top: 11px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+/* line 26, base/_mixins.scss */
+header .practitioner .person-icon > div {
+  padding: 8px 0 0 0;
+  color: #47c7ff;
+  font-size: 2em;
+  text-align: center;
+}
+/* line 19, views/layout/_header.scss */
+header .security {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 10%;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding: 0px 10px 0 0;
+}
+/* line 344, libs/jeet/_grid.scss */
+header .security:before, header .security:after {
+  content: '';
+  display: table;
+}
+/* line 349, libs/jeet/_grid.scss */
+header .security:after {
+  clear: both;
+}
+/* line 20, views/layout/_header.scss */
+header .security .icon {
+  margin-top: 14px;
+  font-size: 2em;
+  text-align: right;
+  cursor: pointer;
+}
+/* line 21, views/layout/_header.scss */
+header .security .selected {
+  color: #dc3f39;
+}
